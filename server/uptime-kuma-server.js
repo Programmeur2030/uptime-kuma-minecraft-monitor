@@ -135,6 +135,7 @@ class UptimeKumaServer {
         UptimeKumaServer.monitorTypeList["mysql"] = new MysqlMonitorType();
         UptimeKumaServer.monitorTypeList["oracledb"] = new OracleDbMonitorType();
         UptimeKumaServer.monitorTypeList["ntp"] = new NTPMonitorType();
+        UptimeKumaServer.monitorTypeList["minecraft"] = new MinecraftMonitorType();
 
         // Allow all CORS origins (polling) in development
         let cors = undefined;
