@@ -114,6 +114,9 @@
                                         <option value="steam">
                                             {{ $t("Steam Game Server") }}
                                         </option>
+                                        <option value="minecraft server">
+                                            {{ $t("Minecraft Server") }}
+                                        </option>
                                     </optgroup>
                                 </select>
                                 <i18n-t
