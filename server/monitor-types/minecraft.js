@@ -45,7 +45,7 @@ function pingMinecraftServer(server) {
 }
 
 class MinecraftMonitorType extends MonitorType {
-    name = Minecraft;
+    name = "Minecraft";
 
     /**
      * Whether or not this type supports monitor conditions. Controls UI visibility in monitor form.
@@ -76,8 +76,8 @@ class MinecraftMonitorType extends MonitorType {
      * @param {UptimeKumaServer} server Uptime Kuma server
      * @returns {Promise<void>}
      */
-    async check(monitor, heartbeat, server) {
-        const MinecraftStatus = await pingMinecraftServer(serverurl);
+    async check(monitor, heartbeat, _server) {
+        const MinecraftStatus = await pingMinecraftServer(monitor.serverurl);
 
         if (status.online === true) {
             heartbeat.status = UP;
@@ -85,10 +85,9 @@ class MinecraftMonitorType extends MonitorType {
         } else {
             throw new Error("server is offline or not reachble");
         }
-      );
     }
 }
 
 module.exports = {
-    MonitorType,
+    MinecraftMonitorType,
 };

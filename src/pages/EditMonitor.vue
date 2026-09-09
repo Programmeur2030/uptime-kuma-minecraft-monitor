@@ -12,8 +12,7 @@
                                 v-if="monitor.type === 'globalping'"
                                 keypath="GlobalpingMonitorDescription"
                                 tag="p"
-                                class="form-text"
-                            >
+                                class="form-text">
                                 <template #accountSettings>
                                     <router-link to="/settings/general">{{ $t("account settings") }}</router-link>
                                 </template>
@@ -479,7 +478,7 @@
                             </template>
 
                             <!-- Hostname -->
-                            <!-- TCP Port / Ping / DNS / Steam / MQTT / Radius / Tailscale Ping / SNMP / SMTP / SIP Options / NTP only -->
+                            <!-- TCP Port / Ping / DNS / Steam / MQTT / Radius / Tailscale Ping / SNMP / SMTP / SIP Options / NTP / Minecraft only -->
                             <div
                                 v-if="
                                     monitor.type === 'port' ||
@@ -493,7 +492,8 @@
                                     monitor.type === 'smtp' ||
                                     monitor.type === 'snmp' ||
                                     monitor.type === 'sip-options' ||
-                                    monitor.type === 'ntp'
+                                    monitor.type === 'ntp' ||
+                                    monitor.type === 'minecraft'
                                 "
                                 class="my-3"
                             >
@@ -1533,6 +1533,21 @@
                                     />
                                 </div>
                             </template>
+                            
+                             <div
+                                v-if="monitor.type === 'Minecraft'"
+                                class="my-3">
+                                <label for="url" class="form-label">{{ $t("Minecraft server Address") }}</label>
+                                <input
+                                    id="MinecraftAddress"
+                                    v-model="monitor.MinecraftAddress"
+                                    type="url"
+                                    class="form-control"
+                                    required
+                                    data-testid="minecraft-server-addres"
+                                />
+                            </div>
+
 
                             <!-- Conditions -->
                             <EditMonitorConditions

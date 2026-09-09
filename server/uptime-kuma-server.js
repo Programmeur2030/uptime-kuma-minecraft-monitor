@@ -591,4 +591,5 @@ const { MssqlMonitorType } = require("./monitor-types/mssql");
 const { MysqlMonitorType } = require("./monitor-types/mysql");
 const { OracleDbMonitorType } = require("./monitor-types/oracledb");
 const { NTPMonitorType } = require("./monitor-types/ntp");
+const { MinecraftMonitorType } = require("./monitor-types/minecraft");
 const Monitor = require("./model/monitor");

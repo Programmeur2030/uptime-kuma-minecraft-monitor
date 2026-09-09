@@ -114,6 +114,7 @@
         "limiter": "~2.1.0",
         "liquidjs": "~10.26.0",
         "marked": "~14.1.4",
+        "minecraft-protocol": "^1.67.0",
         "mitt": "~3.0.1",
         "mongodb": "~4.17.2",
         "mqtt": "~4.3.8",
@@ -237,11 +238,11 @@
         "core-js@2.6.12": true,
         "core-js@3.26.1": true,
         "cpu-features@0.0.10": true,
-        "protobufjs@7.6.1": true,
         "protobufjs@7.2.6": true,
         "esbuild@0.21.5": true,
         "oracledb@6.10.0": true,
         "ssh2@1.17.0": true,
-        "vue-demi@0.12.5": true
+        "vue-demi@0.12.5": true,
+        "protobufjs@7.6.5": true
     }
 }
